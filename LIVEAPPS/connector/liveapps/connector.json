@@ -1,0 +1,70 @@
+{
+  "name": "tibco-liveapps",
+  "title": "Live Apps Connector",
+  "author": "TIBCO Software Inc.",
+  "type": "flogo:connector",
+  "version": "1.0.0",
+  "display": {
+    "description": "This is a Tibco Live Apps connector",
+    "category": "LIVEAPPS",
+    "visible": true,
+    "smallIcon": "liveapps.png"
+  },
+  "ref": "github.com/jezrsmith/tci/examples/LIVEAPPS/connector/liveapps",
+  "keyfield": "name",
+  "settings": [
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "display": {
+        "name": "Connection Name",
+        "description": "Name of the connection"
+      }
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "display": {
+        "name": "Description",
+        "description": "Connection description"
+      }
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "required": true,
+      "display": {
+        "name": "Tibco Account User Id",
+        "description": "Username for the account (email address)"
+      }
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "required": true,
+      "display": {
+        "name": "Tibco Account Password",
+        "description": "Password for the account",
+        "type": "password"
+      }
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": true,
+      "display": {
+        "name": "Region",
+        "description": "Live Apps Region (eu/us)"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "name": "Save",
+      "display": {
+        "readonly": false
+      }
+    }
+  ]
+}

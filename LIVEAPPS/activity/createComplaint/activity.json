@@ -1,0 +1,70 @@
+{
+    "name": "createComplaint",
+    "version": "1.0.0",
+    "title": "Create Complaint",
+    "author": "TIBCO Software Inc.",
+    "type": "flogo:activity",
+     
+    "display": {
+       "category": "LIVEAPPS",
+       "visible": true,
+       "smallIcon": "complaint.png",
+       "description": "This activity creates a complaint case in Live Apps"
+    },
+    "ref": "github.com/jezrsmith/tci/examples/LIVEAPPS/activity/createComplaint",
+    "inputs": [
+            {
+                "name": "liveappsConnection",
+                "type": "object",
+                "required": true,
+                "display":{
+                    "name": "Live Apps Connection",
+                    "description": "Select Live Apps Connection",
+                    "type": "connection"
+                },
+                "allowed":[]
+           },
+           {
+            "name": "reference",
+            "type": "integer",
+            "required": true
+           },
+           {
+            "name": "name",
+            "type": "string",
+            "required": true
+           },
+           {
+            "name": "contact",
+            "type": "string",
+            "required": true
+           },
+           {
+            "name": "type",
+            "type": "string",
+            "required": false,
+            "display":{
+                "name": "Type",
+                "description": "Type of complaint to raise",
+                "mappable": true
+              },
+              "allowed": ["Customer Service", "Faulty Product", "Wrong Product", "Billing", "Other"]
+           },
+           {
+            "name": "summary",
+            "type": "string",
+            "required": true
+           },
+           {
+            "name": "description",
+            "type": "string",
+            "required": true
+           }
+    ],
+    "outputs": [
+           {
+            "name": "result",
+            "type": "string"
+          }
+    ]
+}
