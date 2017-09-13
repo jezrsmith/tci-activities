@@ -32,8 +32,10 @@ updating: LIVEAPPS/connector/liveapps/connector.module.ts (deflated 52%)
 updating: LIVEAPPS/connector/liveapps/connector.ts (deflated 68%)
 updating: LIVEAPPS/connector/liveapps/liveapps.png (stored 0%)
 
+
+Then you can upload the la.zip file as a connector in the connector tab of TCI UI
+
 Notes:
 
 It requires the createComplaint sample app in live apps.
-
 
