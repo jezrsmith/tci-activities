@@ -63,7 +63,7 @@
     {
       "name": "Save",
       "display": {
-        "readonly": false
+        "readonly": true
       }
     }
   ]
