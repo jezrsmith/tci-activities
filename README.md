@@ -5,9 +5,12 @@ Repo for sample tci activities and connectors
 LIVEAPPS sample:
 
 To install, download code and zip up the LIVEAPPS directory like this:
+
 MacBook-Pro-5:src jsmith$ pwd
 /Users/jsmith/go/src
+
 MacBook-Pro-5:src jsmith$ zip -r la.zip ./LIVEAPPS
+
 updating: LIVEAPPS/ (stored 0%)
 updating: LIVEAPPS/.DS_Store (deflated 93%)
 updating: LIVEAPPS/activity/ (stored 0%)
