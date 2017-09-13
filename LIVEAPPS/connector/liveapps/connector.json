@@ -10,7 +10,7 @@
     "visible": true,
     "smallIcon": "liveapps.png"
   },
-  "ref": "github.com/jezrsmith/tci/examples/LIVEAPPS/connector/liveapps",
+  "ref": "github.com/jezrsmith/tci-activities/LIVEAPPS/connector/liveapps",
   "keyfield": "name",
   "settings": [
     {
