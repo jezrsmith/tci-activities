@@ -11,7 +11,7 @@
        "smallIcon": "complaint.png",
        "description": "This activity creates a complaint case in Live Apps"
     },
-    "ref": "github.com/jezrsmith/tci/examples/LIVEAPPS/activity/createComplaint",
+    "ref": "github.com/jezrsmith/tci-activities/LIVEAPPS/activity/createComplaint",
     "inputs": [
             {
                 "name": "liveappsConnection",
