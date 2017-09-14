@@ -25,6 +25,12 @@ const (
 	tenantID        = "BPM"
 	sandboxID       = "31"
 
+	// accountID. This is for accounts with multiple organizations
+	// I dont want to confuse the connector config since it is hard to get this ID so
+	// for now it has to be set here
+	//accountID = "01BHEWGDNHCPGS8PYZMMGKBAMN"
+	accountID = ""
+
 	// Live Apps application config
 	applicationID        = 193
 	applicationCreatorID = 908
@@ -186,6 +192,9 @@ func performLogin(token string) []*http.Cookie {
 	data := url.Values{}
 	data.Set("TenantId", tenantID)
 	data.Add("AccessToken", token)
+	if accountID != "" {
+		data.Add("AccountId", accountID)
+	}
 	reqBody = bytes.NewBufferString(data.Encode())
 
 	req, err := http.NewRequest(method, uri, reqBody)
