@@ -57,6 +57,15 @@
         "name": "Region",
         "description": "Live Apps Region (eu/us)"
       }
+    },
+    {
+      "name": "accountid",
+      "type": "string",
+      "required": false,
+      "display": {
+        "name": "AccountId",
+        "description": "Live Apps AccountID (only required for accounts with multiple organizations)"
+      }
     }
   ],
   "actions": [

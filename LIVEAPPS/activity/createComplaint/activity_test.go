@@ -18,8 +18,10 @@ import (
 var activityMetadata *activity.Metadata
 
 const (
-	user = "<USERNAME HERE>"
-	pass = "<PASSWORD HERE>"
+	user = "<USERNAME>"
+	pass = "<PASSWORD>"
+	//accountid = "<ACCOUNTID>"
+	accountid = ""
 )
 
 func getActivityMetadata() *activity.Metadata {
@@ -49,7 +51,7 @@ func TestEval(t *testing.T) {
 	// setup connection
 	// Generate a connection object
 	connectionData := make(map[string]interface{})
-	connectionSettings := make([]interface{}, 3)
+	connectionSettings := make([]interface{}, 4)
 
 	// Add a username
 	usernameKey := make(map[string]interface{})
@@ -68,6 +70,12 @@ func TestEval(t *testing.T) {
 	regionKey["name"] = "region"
 	regionKey["value"] = "EU"
 	connectionSettings[2] = regionKey
+
+	// Add accountId
+	accountidKey := make(map[string]interface{})
+	accountidKey["name"] = "accountid"
+	accountidKey["value"] = accountid
+	connectionSettings[3] = accountidKey
 
 	connectionData["settings"] = connectionSettings
 

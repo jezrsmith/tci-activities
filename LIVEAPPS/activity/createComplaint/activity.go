@@ -25,12 +25,6 @@ const (
 	tenantID        = "BPM"
 	sandboxID       = "31"
 
-	// accountID. This is for accounts with multiple organizations
-	// I dont want to confuse the connector config since it is hard to get this ID so
-	// for now it has to be set here
-	//accountID = "01BHEWGDNHCPGS8PYZMMGKBAMN"
-	accountID = ""
-
 	// Live Apps application config
 	applicationID        = 193
 	applicationCreatorID = 908
@@ -55,6 +49,7 @@ const (
 var username string
 var password string
 var region string
+var accountID = ""
 var liveAppsURL string
 
 var activityLog = logger.GetLogger("tibco-activity-complaint-creator")
@@ -103,6 +98,8 @@ func (a *CreateComplaintActivity) Eval(context activity.Context) (done bool, err
 			password = setting["value"].(string)
 		} else if setting["name"] == "region" {
 			region = setting["value"].(string)
+		} else if setting["name"] == "accountid" {
+			accountID = setting["value"].(string)
 		}
 	}
 	activityLog.Info("Got connection details")
